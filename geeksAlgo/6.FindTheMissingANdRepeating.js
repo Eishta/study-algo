@@ -29,6 +29,7 @@ let printtwo = a => {
 // [1,2,2]
 let findMissRep = a => {
     let l = a.length;
+    if (l <= 1) return;
     let sumN = Math.floor(l * (l + 1) / 2); // 1+2+3= 6
     let sumNS = Math.floor((l * (l + 1) * (2 * l + 1)) / 6); // 1+4+9 = 14
     let xMinY = a.reduce((acc, e) => acc - e, sumN); // 1

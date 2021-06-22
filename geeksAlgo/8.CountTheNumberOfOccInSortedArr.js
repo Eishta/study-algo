@@ -12,8 +12,8 @@ let first = (a, l, h, x, n) => {
     if (h >= l) {
         let mid = Math.floor((l + h) / 2);
         if ((mid === 0 || x > a[mid - 1]) && a[mid] === x) return mid;
-        else if (a[mid] > x) return first(a, l, mid - 1, x, n)
-        else return first(a, mid + 1, h, x, n)
+        else if (a[mid] < x) return first(a, mid + 1, h, x, n)
+        else return first(a, l, mid - 1, x, n)
     }
     return -1;
 }
