@@ -9,12 +9,12 @@
  * @param {number[]} nums
  * @return {number}
  */
-
+// Kadanes algo 
 let maxSubArray = (arr) => {
     let prev = 0;
     let max = -Infinity;
     for (let i = 0; i < arr.length; i++) {
-        prev = Math.max(prev + arr[i], arr[i]);
+        prev = Math.max(prev + arr[i], arr[i]); // if a[i] <= prev+a[i] then prev = prev +a[i] else prev = a[i]
         max = Math.max(prev, max)
     }
     return max;

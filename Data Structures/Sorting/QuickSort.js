@@ -9,7 +9,7 @@
 /**
  *  Partition(A, start, end)
  *      select pivot = A[end-1]
- *      p_index = 0
+ *      p_index = start
  *      Loop i=start to end -1  
  *          if A[i] < pivot
  *              swap A[i] and A[p_index]
@@ -50,8 +50,25 @@ let partition = (A, start, end) => {
             [A[i], A[p_index]] = [A[p_index], A[i]]
             p_index++;
         }
-
     }
     [A[end], A[p_index]] = [A[p_index], A[end]]
     return p_index;
+}
+
+let kthLargest = (a, l, h, k) => {
+    if (k > 0 && k <= a.length) {
+        let pos = partition(a, l, h);
+        let indexNeeded = a.length - k;
+        if (pos == indexNeeded) {
+            return a[pos];
+        }
+        else if (pos < indexNeeded) {
+            return kthLargest(a, pos + 1, h, k);
+        }
+        else {
+            return kthLargest(a, l, pos - 1, k);
+        }
+
+    }
+    else return 'NotFound'
 }

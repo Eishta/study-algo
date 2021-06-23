@@ -4,7 +4,7 @@
 // 2. Find any occurence of the ele using binary search. when it is found :-
 // loop back to get all the elements before and loop after to get all elements after the found position
 
-// 3. Find the first and last occurence of the element using vinary search
+// 3. Find the first and last occurence of the element using binary search
 
 // 3.
 
