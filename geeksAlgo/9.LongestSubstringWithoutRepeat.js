@@ -5,7 +5,7 @@ let longestSubstring = (s) => {
     let seen = new Map();
     for (let right = 0; right < s.length; right++) {
         if (seen[s[right]] !== undefined && seen[s[right]] >= left) {
-            left = right;
+            left = seen[s[right]] + 1;
         }
         seen[s[right]] = right;
         longest = Math.max(longest, right - left + 1);
