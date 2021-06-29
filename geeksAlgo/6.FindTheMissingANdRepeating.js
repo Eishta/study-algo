@@ -24,7 +24,17 @@ let printtwo = a => {
     return [miss, rep];
 }
 
+// -----------------------------------------------------------------METHOD 2
+// # expectedSum = w+x+y+z
+// #actualSum = w+y+y+z
 
+// #expectedSumSquare = w2+x2+y2+z2
+// #actualSumSquare = w2+y2+y2+z2
+
+// #=> x - y => expectedSum-actualSum
+// # => x2 - y2 => expectedSumSquare-actualSumSquare
+
+// # x = (x-y) + (x-y) (x+y)/(x-y)/2  
 // with math formula 
 // [1,2,2]
 let findMissRep = a => {

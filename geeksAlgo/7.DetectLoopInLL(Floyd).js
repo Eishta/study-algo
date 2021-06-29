@@ -1,5 +1,6 @@
+// -----------------------------------------------------------------METHOD 1
 // 1. Hashing Approch
-// T{n}= O(n)  S{n}= O(n)
+// T{n}= O(n) , S{n}= O(n)
 let detectLoop=(head)=>{
     let set = new Set();
     while(head){
@@ -9,8 +10,8 @@ let detectLoop=(head)=>{
     }
     return false;
 }
-
-// 2.Without hasmap=> S{n}= O(1), T{n}= O(n)
+// -----------------------------------------------------------------METHOD 2
+// 2.Without hashmap=> S{n}= O(1), T{n}= O(n)
 // set a flag with each linkedList node
 
 class Node{
@@ -29,7 +30,7 @@ let detectLoop = (head)=>{
     }
     return false;
 }
-
+// -----------------------------------------------------------------METHOD 3
 // 3. Floyd Cycle-Finding Algorithm(Tortoise and hare)
 // Traverse linked list using two pointers.
 // Move one pointer(slow_p) by one and another pointer(fast_p) by two.

@@ -11,7 +11,7 @@
 let twoSum = (numArr, target) => {
     // create a map 
     let numMap = newMap();
-    let complement
+    let complement=0;
     // loop on the array
     for (let i = 0; i < numArr.length; i++) {
         complement = target - numArr[i];
