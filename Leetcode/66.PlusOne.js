@@ -42,6 +42,28 @@ let d = (A) => {
             carry = 0;
         }
     }
-    while(A[0]===0)A.shift()
+    while (A[0] === 0) A.shift()
     return A;
+}
+// Method 3
+var plusOne = function (digits) {
+    let i = digits.length - 1;
+    let carry = 1;
+    while (carry || i >= 0) {
+        if (i < 0) {
+            digits = [1, ...digits];
+            break;
+        }
+        let sum = digits[i] + 1;
+        if (sum > 9) {
+            digits[i] = sum - 10;
+            carry = 1;
+        }
+        else {
+            digits[i] = sum;
+            break;
+        }
+        i--;
     }
+    return digits;
+};

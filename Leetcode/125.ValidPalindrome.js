@@ -16,3 +16,25 @@ var isPalindrome = function (s) {
     }
     return true;
 };
+
+//-----------------------------------------------------------------Method 2
+let isAlphaNumeric = char =>{
+    let charCode = char.charCodeAt();
+    return (charCode>=48 && charCode<=57) || (charCode>=97 && charCode <=122);
+}
+
+let isPalindrome = str =>{
+    let strLower = str.toLowerCase();
+    let [i,j]= [0,strLower.length-1];
+    while(i<j){
+        while(i<j && !isAlphaNumeric(strLower[i]) ){
+            i++;
+        }
+        while(i<j && !isAlphaNumeric(strLower[j])){
+            j--;
+        }
+        if(strLower[i]!==strLower[j])return false;
+        i++;j--;
+    }
+    return true;
+}

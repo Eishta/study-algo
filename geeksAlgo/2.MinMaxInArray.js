@@ -54,17 +54,28 @@ let getMinMaxInPairs = (arr) => {
         i = 1;
     }
     // compare with next pair in the array
-    while(i< arr.length -1){  // comaprison = even ? (n-2)/2  : (n-1)/2
-        if(arr[i]> arr[i+1]){  // comarison = even ? (n-2)/2  : (n-1)/2
-           minmax.min= arr[i+1]< minmax.min ? arr[i+1] : minmax.min;
-           minmax.max = arr[i] > minmax.max ? arr[i] : minmax.max;
+    while (i < arr.length - 1) {  // comaprison = even ? (n-2)/2  : (n-1)/2
+        if (arr[i] > arr[i + 1]) {  // comarison = even ? (n-2)/2  : (n-1)/2
+            minmax.min = arr[i + 1] < minmax.min ? arr[i + 1] : minmax.min;
+            minmax.max = arr[i] > minmax.max ? arr[i] : minmax.max;
         }
-        else{
-           minmax.min= arr[i]< minmax.min ? arr[i] : minmax.min;
-           minmax.max = arr[i+1] > minmax.max ? arr[i+1] : minmax.max;
+        else {
+            minmax.min = arr[i] < minmax.min ? arr[i] : minmax.min;
+            minmax.max = arr[i + 1] > minmax.max ? arr[i + 1] : minmax.max;
         }
-        i+=2;
+        i += 2;
     }
     return minmax;
 
+}
+
+
+//------------------------------------------------------------------------------METHOD 3
+let minMax = (arr) => {
+    let [min, max] = [Infinity, -Infinity];
+    for (let i = 0; i < arr.length; i++) {
+        min = Math.min(min, arr[i]);
+        max = Math.max(max, a[i]);
+    }
+    return [min, max];
 }

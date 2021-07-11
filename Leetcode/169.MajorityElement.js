@@ -11,3 +11,18 @@ var majorityElement = function (nums) {
         if (map[nums[i]] > size) return nums[i];
     }
 };
+
+//Moore algorithm
+var majorityElement = function (nums) {
+    let [count, major] = [1, nums[0]];
+    for (let i = 1; i < nums.length; i++) {
+
+        if (nums[i] !== major) count--;
+        else count++;
+        if (count == 0) {
+            major = nums[i];
+            count = 1;
+        }
+    }
+    return major;
+};

@@ -17,3 +17,14 @@ let twoSum = (nums, target) =>{
     }
     return [i+1, j+1]
 }
+
+//----------------------------------------------------
+var twoSum = function(nums, target) {
+    let [i,j]=[0,nums.length-1];
+    while(i<j){
+        let sum = nums[i]+nums[j];
+        if(sum===target)return [i+1,j+1];
+        else if(sum>target)j--;
+        else i++;
+    }
+};
