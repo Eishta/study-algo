@@ -4,7 +4,12 @@
 // 1 <= s.length <= 15
 // s contains only the characters ('I', 'V', 'X', 'L', 'C', 'D', 'M').
 // It is guaranteed that s is a valid roman numeral in the range [1, 3999].
+// Input: s = "III"
+// Output: 3
+// Example 2:
 
+// Input: s = "IV"
+// Output: 4
 let romanToInteger = (str)=>{
     let num = 0;
     let romanMap={
