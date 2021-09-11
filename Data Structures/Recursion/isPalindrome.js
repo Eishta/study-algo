@@ -10,3 +10,12 @@ let isPalindrome = (str) => {
     // recursive case
     return isPalindrome(str.slice(1,-1));  // str with first and last char removed
 };
+
+
+function isPalindrome(str) {
+  if (str.length === 0) return true;
+  else if (str[0] !== str[str.length - 1]) return false;
+  else return isPalindrome(str.slice(1, -1));
+}
+isPalindrome('aba')
+true
