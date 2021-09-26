@@ -50,3 +50,24 @@ var longestCommonPrefix = function (strs) {
     }
     return prefix;
 };
+
+
+// Method 3 
+var longestCommonPrefix = function (strs) {
+    if (!strs.length) return '';
+    if (strs.length === 1) return strs[0]
+    let prefix = '';
+    let commonPrefix = '';
+    let first = strs[0];
+    strs = strs.slice(1);
+    for (let i in first) {
+        prefix += first[i];
+        for (let str of strs) {
+            if (!str.startsWith(prefix)) {
+                return commonPrefix;
+            }
+        }
+        commonPrefix = prefix;
+    }
+    return commonPrefix;
+};
