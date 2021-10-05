@@ -1,7 +1,7 @@
 // You are given a string s and an array of strings words of the same length. 
 // Return all starting indices of substring(s) in s that is a concatenation of each word in
 //  words exactly once, in any order, and without any intervening characters.
-
+// https://www.youtube.com/watch?v=Bbu4Qjzf7A0
 // Input: s = "barfoothefoobarman", words = ["foo","bar"]
 // Output: [0,9]
 // Input: s = "wordgoodgoodgoodbestword", words = ["word","good","best","word"]
