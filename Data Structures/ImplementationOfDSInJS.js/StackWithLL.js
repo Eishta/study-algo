@@ -1,58 +1,100 @@
 class Node {
-    constructor(data) {
-        this.data = data;
-        this.next = null;
+    constructor(ele, next = null) {
+        this.data = ele;
+        this.next = next;
     }
 }
-
-class stack {
+class Stack {
     constructor() {
         this.top = null;
     }
+    push(ele) {
+        let node = new Node(ele);
+        if (this.top) {
 
-    push(item) {
-        let node = new Node(item);
-        if (!this.top) {
-            this.top = node;
-        }
-        else {
             node.next = this.top;
             this.top = node;
         }
-
-    }
-    pop() {
-        if (!this.top) return 'Stack Underflow';
         else {
-            let top = this.top;
-            this.top = this.top.next;
-            return top.data;
+            this.top = node;
         }
     }
-    peek() {
-        if (this.top) return this.top.data;
-        else return false;
+    pop() {
+        if (this.isEmpty()) return 'Underflow';
+        let top = this.top.data;
+        this.top = this.top.next;
+        return top;
     }
     isEmpty() {
         return !this.top;
     }
-    size() {
-        let cur = this.top, count = 0;
-        while (cur) {
-            count++;
-            cur = cur.next;
+    printStack() {
+        if (this.isEmpty()) return 'Stack is Empty';
+        let node = this.top;
+        while (node) {
+            console.log(node.data);
+            node = node.next;
         }
-        return count;
+    }
+    getFirstElement() {
+        if (this.isEmpty()) return 'Underflow';
+        else return this.top.data;
+    }
+    getLastElement() {
+        if (this.isEmpty()) return 'Underflow';
+        else {
+            let node = this.top;
+            while (node.next) {
+                node = node.next;
+            }
+            return node.data;
+        }
+    }
+    size() {
+        if (this.top) {
+            let node = this.top;
+            let count = 0;
+            while (node) {
+                count++;
+                node = node.next;
+            }
+            return count;
+        }
+        else return 0;
     }
     search(item) {
         if (this.top) {
-            let cur = this.top;
-            while (cur) {
-                if (cur.data === item) return true;
-                cur = cur.next;
+            let node = this.top;
+            while (node) {
+                if (node.data === item) return true;
+                node = node.next;
             }
-            return false
-        }
-        return false;
+            return false;
+        } else return false;
     }
+
 }
+
+let s = new Stack();
+s.push(2);
+s.push(3);
+
+// stack 
+// {
+//     "top": {
+//         "data": 3,
+//             "next": {
+//             "data": 2,
+//                 "next": null
+//         }
+//     }
+// }
+
+s.printStack(); // 3 2
+s.getFirstElement(); // 3
+s.pop(); // 3
+s.pop(); // 2
+s.printStack(); // Stack is Empty
+s.isEmpty(); // true
+s.getFirstElement(); // Underflow
+s.getLastElement() // UnderFlow
