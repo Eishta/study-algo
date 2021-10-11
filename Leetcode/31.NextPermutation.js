@@ -22,6 +22,7 @@
  *   * which is reverse of the numbers 532
  *   * reverse the next elements after index i=> i+1 to last 
  */
+// https://youtu.be/TOvWyFT0xCw
 
 var nextPermutation = function (nums) {
     // find the element from right such that a[i]<a[i+1]
@@ -42,3 +43,4 @@ let reverse = (start, end, arr) => {
     }
     return arr;
 }
+

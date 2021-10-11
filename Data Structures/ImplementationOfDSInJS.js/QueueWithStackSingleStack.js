@@ -2,7 +2,6 @@ class Queue {
     constructor() {
         this.s = [];
     }
-    // enqueue is a costly function here
     enqueue(data) {
         this.s.push(data);
     }

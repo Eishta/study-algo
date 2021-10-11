@@ -1,16 +1,4 @@
-/**
- * Definition for a binary tree node.
- * function TreeNode(val, left, right) {
- *     this.val = (val===undefined ? 0 : val)
- *     this.left = (left===undefined ? null : left)
- *     this.right = (right===undefined ? null : right)
- * }
- */
-/**
- * @param {TreeNode} p
- * @param {TreeNode} q
- * @return {boolean}
- */
+// Method 1 - Recursive
 var isSameTree = function (p, q) {
     if (!p && !q) return true;
     if (!p || !q) return false;
@@ -21,3 +9,26 @@ var isSameTree = function (p, q) {
 // Space complexity: O(1) (ignore recursion stack, otherwise the height of the tree)
 ///======================================= Method 2
 // find the preorder of both and compare
+
+
+// Method 2- With stack and iterative
+// TimeComplexity = O(n)
+// Space = O(n);
+var isSameTree = function (p, q) {
+    let stack = [p, q];
+    while (stack.length) {
+        q = stack.pop();
+        p = stack.pop();
+
+        if (!p && !q) continue;
+        if (!p || !q) return false;
+        if (p.val === q.val) {
+            stack.push(p.left);
+            stack.push(q.left);
+            stack.push(p.right);
+            stack.push(q.right);
+
+        } else return false;
+    }
+    return true;
+};

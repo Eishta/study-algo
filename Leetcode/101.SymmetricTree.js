@@ -33,16 +33,11 @@ var isSymmetric = function (root) {
     while (stack.length) {
 
         let [left, right] = stack.pop();
-        console.log('left');
-        console.log(left);
-        console.log('right'); console.log(right)
         if (!left && !right) continue;
         if (!left || !right) return false;
         if (left.val == right.val) {
-            stack.unshift([left.left, right.right]);
-            stack.unshift([left.right, right.left]);
-            console.log(stack)
-
+            stack.push([left.left, right.right]);
+            stack.push([left.right, right.left]);
         }
         else return false;
     }
