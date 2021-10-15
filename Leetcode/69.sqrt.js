@@ -4,19 +4,19 @@
 
 // Input: x = 4
 // Output: 2
+// Link : https://www.youtube.com/watch?v=VYtEKhxKd1Q
 
-
-var mySqrt = function(x) {
+var mySqrt = function (x) {
     let left = 1;
     let right = x;
-    if(x<2)return x;
-    while (left < right){
-        let mid =left+ Math.floor((right-left)/2);
-        
-        if(mid * mid === x) return mid;
-        else if(mid * mid > x) right= mid;
-        else if(mid * mid < x) left = mid+1;
+    if (x < 2) return x;
+    while (left < right) {
+        let mid = left + Math.floor((right - left) / 2);
+
+        if (mid * mid === x) return mid;
+        else if (mid * mid > x) right = mid;
+        else if (mid * mid < x) left = mid + 1;
     }
-    return left-1;
+    return left - 1;
 };
 
