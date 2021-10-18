@@ -1,5 +1,6 @@
 // Suppose an array of length n sorted in ascending order is rotated between 1 and n times
 //https://www.youtube.com/watch?v=IzHR_U8Ly6c
+// https://www.youtube.com/watch?v=j3187M1P2Xg   = easier and have 154 also
 // Input: nums = [3,4,5,1,2]
 // Output: 1
 
