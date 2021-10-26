@@ -11,4 +11,5 @@ let jump = nums => {
         if (reachable < i) return false; //when i reaches a point which is not reachable yet
         reachable = Math.max(reachable, i + nums[i]);
     }
+    return true;
 }

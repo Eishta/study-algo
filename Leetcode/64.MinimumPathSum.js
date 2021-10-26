@@ -3,6 +3,7 @@
 
 // Input: grid = [[1,2,3],[4,5,6]]
 // Output: 12
+// https://leetcode.com/problems/minimum-path-sum/discuss/344980/Java.-Details-from-Recursion-to-DP.
 
 var minPathSum = function (grid) {
     let m = grid.length;

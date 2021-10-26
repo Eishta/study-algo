@@ -3,7 +3,9 @@
 // Example-
 // Input: nums = [4,5,6,7,0,1,2], target = 0
 // Output: 4
-
+// trick - we are able to find which part the target lies only by making use of the sorted part
+// how- check which part is sorted then check if the elemnet lies btw the start and end of that sorted part -> 
+// if yes update the l and r to the sorted part ele move to the unsorted part
 
 // Method 1
 // T(n) = O(logn);
@@ -17,16 +19,16 @@ var search = function (nums, target) {
         if (nums[mid] === target) {
             return mid;
         }
-        else if (nums[mid] >= nums[l]) {
-            if (target >= nums[l] && target <= nums[mid]) {
+        else if (nums[mid] >= nums[l]) { // if left part is sorted
+            if (target >= nums[l] && target <= nums[mid]) { // if target lies in the left part
                 r = mid - 1;
             }
             else {
                 l = mid + 1;
             }
         }
-        else {
-            if (target >= nums[mid] && target <= nums[r]) {
+        else { // if left part is unsorted
+            if (target >= nums[mid] && target <= nums[r]) { // if target lies in the right sorted part
                 l = mid + 1;
             }
             else {

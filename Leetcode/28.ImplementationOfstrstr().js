@@ -17,10 +17,10 @@ var strStr = function (haystack, needle) {
                 i++; j++
             }
             else {
-                i = i - j + 1;
-                j = 0;
+                i = i - j + 1; // skip the first element from which needle started matching
+                j = 0;  // reset for the needle as the comparison will again start from 0
             }
         }
-        return j == needle.length ? i - j : -1
+        return j == needle.length ? i - j : -1 // loop ends when j becomes equal to needle.length 
     }
 };

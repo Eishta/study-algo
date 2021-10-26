@@ -22,7 +22,8 @@ let minDepth = root => {
     if (!root) return 0;
     let l = minDepth(root.left);
     let r = minDepth(root.right);
-    return !(l && r) ? l + r + 1 : Math.min(l, r) + 1;
+    return !(l && r) ? l + r + 1 : Math.min(l, r) + 1; // handling the case where mindepth returns 0 and  0 is always min ,
+    //  so in case any of the l, r is 0 , it becomes either l+1 or r+1 else min of l and r +1
 }
 
 let minDepth = root => {

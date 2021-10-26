@@ -23,7 +23,7 @@ var levelOrderBottom = function (root) {
                 node.right && queue.push(node.right);
                 level.push(node.val);
             }
-            res.unshift(level);
+            res.unshift(level);  // the only differnce where we dont push but unshift the levels
         }
         return res;
     }

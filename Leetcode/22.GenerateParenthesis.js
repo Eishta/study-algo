@@ -13,6 +13,6 @@ const findAll= function(cur, o,c,res,n){
         res.push(cur);
         return;
     }
-    if(o<n)findAll(cur+'(', o+1,c,res,n);
-    if(c<o)findAll(cur+')', o,c+1,res,n)
+    if(o<n)findAll(cur+'(', o+1,c,res,n); // increment 1 in o when open bracket is added
+    if(c<o)findAll(cur+')', o,c+1,res,n) // increment 1 in c when close bracket is added
 }

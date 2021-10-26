@@ -11,7 +11,7 @@ var search = function (nums, target) {
         }
         // only diff condition then question part 1
         if (nums[mid] === nums[l] && nums[r] === nums[mid]) {
-            r--; l++;
+            r--; l++; // avoiding the duplicates
         }
         else if (nums[mid] >= nums[l]) {
             if (target >= nums[l] && target <= nums[mid]) {

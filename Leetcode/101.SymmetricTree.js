@@ -43,3 +43,22 @@ var isSymmetric = function (root) {
     }
     return true;
 }
+
+// same way the Sametree is done
+var isSymmetric = (root) => {
+    let stack = [root.left, root.right];
+    while (stack.length) {
+        let r = stack.pop();
+        let l = stack.pop();
+
+        if (!l && !r) continue;
+        if (!l || !r) return false;
+        if (l.val === r.val) {
+            stack.push(l.left);
+            stack.push(r.right);
+            stack.push(l.right);
+            stack.push(r.left);
+        } else return false;
+    }
+    return true;
+}

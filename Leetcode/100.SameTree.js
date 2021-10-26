@@ -2,8 +2,9 @@
 var isSameTree = function (p, q) {
     if (!p && !q) return true;
     if (!p || !q) return false;
-    if (p.val === q.val)
-        return isSameTree(p.left, q.left) && isSameTree(p.right, q.right)
+    if (p.val === q.val) {
+        return isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
+    } else return false;
 };
 // Time complexity: O(n)
 // Space complexity: O(1) (ignore recursion stack, otherwise the height of the tree)

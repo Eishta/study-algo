@@ -26,3 +26,15 @@ var searchInsert = function (nums, target) {
     }
     return result + offset;
 };
+
+
+// smaller version 
+var searchInsert = function(nums, target) {
+    let l = 0, r = nums.length;
+    while(l<r){
+        let mid = Math.floor((l+r)/2);
+        if(nums[mid]<target) l= mid+1;  // l will stop at a place where either the nums[mid] is greater than or equal to target
+        else r = mid;
+    }
+    return l;
+};

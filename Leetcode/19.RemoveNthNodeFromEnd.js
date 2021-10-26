@@ -9,9 +9,9 @@ var removeNthFromEnd = function (head, n) {
     }
     while (hare && hare.next) {
         hare = hare.next;
-        curr = curr.next;
+        curr = curr.next; // curr will stop at one element before the element to be deleted
     }
-    if (!hare) {
+    if (!hare) {  // hare is null when you have to delete the 1st element
         head = head.next;
     } else {
         curr.next = curr.next ? curr.next.next : null;

@@ -14,8 +14,8 @@ var mySqrt = function (x) {
         let mid = left + Math.floor((right - left) / 2);
 
         if (mid * mid === x) return mid;
-        else if (mid * mid > x) right = mid;
         else if (mid * mid < x) left = mid + 1;
+        else right = mid;
     }
     return left - 1;
 };
