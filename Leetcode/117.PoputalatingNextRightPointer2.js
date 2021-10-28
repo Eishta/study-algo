@@ -33,7 +33,7 @@ var connect = function (root) {
     while (root) {
         let cur = new Node(0);
         let temp = cur;
-        while (root) {
+        while (root) { // traverse till last node of the current level
             if (root.left) {
                 cur.next = root.left;
                 cur = cur.next;

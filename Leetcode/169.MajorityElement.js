@@ -11,7 +11,7 @@ var majorityElement = function (nums) {
         if (map[nums[i]] > size) return nums[i];
     }
 };
-
+// [2,2,1,1,1,2,2]
 //Moore algorithm
 var majorityElement = function (nums) {
     let [count, major] = [1, nums[0]];
