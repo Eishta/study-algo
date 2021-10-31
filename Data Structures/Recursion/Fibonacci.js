@@ -6,7 +6,7 @@ let fibI = n => {
     if (typeof n === 'number' && n >= 0 && Math.floor(n) === n) {
         let a = 0, b = 1, c = 0;
         if (n <= 1) return n;
-        for (let i = 3; i <= n; i++) {
+        for (let i = 2; i <= n; i++) {
             c = a + b;
             [a, b] = [b, c];
         }
