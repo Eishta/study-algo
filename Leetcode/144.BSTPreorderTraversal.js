@@ -6,10 +6,6 @@
  *     this.right = (right===undefined ? null : right)
  * }
  */
-/**
- * @param {TreeNode} root
- * @return {number[]}
- */
 
 //  Preorder (Root, Left, Right) 
 
@@ -39,3 +35,20 @@ let preorder2 = root => {
     }
     return list;
 }
+
+
+
+// DFS
+// process the current node and then push the children
+var preorderTraversal = function (root) {
+    if (!root) return [];
+    let result = [];
+    let stack = [root];
+    while (stack.length) {
+        let node = stack.pop();
+        result.push(node.val);
+        if (node.right) stack.push(node.right);
+        if (node.left) stack.push(node.left);
+    }
+    return result;
+};
