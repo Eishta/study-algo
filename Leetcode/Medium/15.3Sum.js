@@ -4,7 +4,7 @@ var threeSum = function (nums) {
     nums.sort((a, b) => a - b);
 
     for (let [i, num] of nums.entries()) {
-        if (num > 0) return sol;
+        if (num > 0) return sol; // as soon as the positive numbers start coming , the sum cannot be 0. so stopn and return the result 
         if (num === nums[i - 1]) continue;
         left = i + 1;
         right = nums.length - 1;
@@ -33,3 +33,4 @@ var threeSum = function (nums) {
     return sol;
 
 };
+
