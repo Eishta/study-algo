@@ -1,27 +1,27 @@
 // Given an array nums and a value val, remove all instances of that value in-place and return the new length.
 var removeElement = function (nums, val) {
-    let c = -1, n = 0;
-    while (n < nums.length) {
-        if (nums[n] !== val) {
-            c++;
-            [nums[c], nums[n]] = [nums[n], nums[c]];
-            n++;
+    let i = -1, j = 0;
+    while (j < nums.length) {
+        if (nums[j] !== val) {
+            i++;
+            [nums[i], nums[j]] = [nums[j], nums[i]];
+            j++;
         }
-        else { n++; }
+        else { j++; }
 
     }
-    return c + 1;
+    return i + 1;
 };
 
 
 // Solution:
 // LOOP STARTS
-// loop till n reaches array end
+// loop till j reaihes array end
 // search for a number that is not equal to the 'val'
-// // increament c so that it points the index which contains val
-// // swap the elements at n and c 
-// // increament n
+// // increament i so that it points the index which contains val
+// // swap the elements at j and i 
+// // increament j
 // else 
-//  // increament n if it points to val
+//  // increament j if it points to val
 // LOOP ENDS
-// END: return c + 1 as it points to the last element swapped so the length becomes c+1
+// END: return i + 1 as it points to the last element swapped so the length becomes i+1

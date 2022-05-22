@@ -5,10 +5,10 @@
 // Explanation: The array represents the integer 123
 
 /**
- * @param {number[]} digits
+ * @param {number[]} A
  * @return {number[]}
  */
-var plusOne = function (digits) {
+var plusOne = function (A) {
     let index = A.length - 1;
     let carry = 1;
     while (carry) {
@@ -18,8 +18,8 @@ var plusOne = function (digits) {
         else {
             A[index] += 1;
         }
-        if (A[index] > 9) {
-            A[index] = 0;
+        if (A[index] > 9) {//  as the digits array conatin values from 1 to 9, so the max value can be 10 , 
+            A[index] = 0; // 10 % 10 = 0
             index--;
         }
         else {
@@ -45,6 +45,8 @@ let d = (A) => {
     while (A[0] === 0) A.shift()
     return A;
 }
+
+
 // Method 3
 var plusOne = function (digits) {
     let i = digits.length - 1;

@@ -15,5 +15,5 @@ let singleNumber = nums => {
 // Method 2 (reduce)
 
 let single = nums => {
-    return single.reduce((prev, cur) => prev ^ cur);
+    return nums.reduce((prev, cur) => prev ^ cur);
 }

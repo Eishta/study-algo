@@ -3,15 +3,15 @@ var generate = function (numRows) {
     else if (numRows === 1) return [[1]];
     else {
         let result = [];
-        for (let row = 1; row <= numRows; row++) {
+        for (let row = 0; row < numRows; row++) {
             let arr = [];
-            for (let col = 0; col < row; col++) {
+            for (let col = 0; col <= row; col++) {
 
-                if (col === 0 || col === row - 1) {
+                if (col === 0 || col === row) {
                     arr.push(1);
                 }
                 else {
-                    arr.push(result[row - 2][col - 1] + result[row - 2][col]);
+                    arr.push(result[row - 1][col - 1] + result[row - 1][col]);
                 }
             }
             result.push(arr);

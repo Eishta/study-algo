@@ -81,3 +81,11 @@ var longestPalindrome = function (s) {
     }
     return s.slice(start, start + maxLength);
 };
+
+// i = starting index
+// i can go max till not including n - k + 1 because for example s = geeks , a length of 3 (k=3), means ,
+// the pairs to check will be -> gee, eek, eks meand the last value that i can have is 2 ( n(5) - k(3) = 2 )
+
+
+// j = ending index
+// j will go from i + k -1 i.e. from 2 to length(geeks) - 1 = 4 => i.e. => i + k -1  
