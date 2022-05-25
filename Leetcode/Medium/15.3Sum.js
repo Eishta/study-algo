@@ -1,11 +1,11 @@
 var threeSum = function (nums) {
     let [sol, left, right] = [[], 0, nums.length - 1];
     if (nums.length < 3) return sol;
-    nums.sort((a, b) => a - b);
+    nums.sort((a, b) => a - b); // easy to remove duplicates 
 
     for (let [i, num] of nums.entries()) {
         if (num > 0) return sol; // as soon as the positive numbers start coming , the sum cannot be 0. so stopn and return the result 
-        if (num === nums[i - 1]) continue;
+        if (num === nums[i - 1]) continue; // avoid duplicates
         left = i + 1;
         right = nums.length - 1;
 
