@@ -11,3 +11,8 @@ let bubbleSort = a => {
 }
 // bubbleSort([3,2,6,3,1,2])
 // (6) [1, 2, 2, 3, 3, 6]
+
+
+
+// comparison happens in pairs hence the name bubble sort
+// the bigger elements start taking their position first and we skip the loop over them by lessening the end condition for j => j< n- i -1
