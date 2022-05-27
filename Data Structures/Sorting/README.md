@@ -1,20 +1,20 @@
-Selection Sort
-	Ω(n^2)	θ(n^2)	O(n^2)	 
-Bubble Sort
+* Selection Sort
+        Ω(n^2)	θ(n^2)	O(n^2)	 
+* Bubble Sort
 	Ω(n)	θ(n^2)	O(n^2)	 
-Insertion Sort
+* Insertion Sort
 	Ω(n)	θ(n^2)	O(n^2)	 
-Heap Sort
+* Heap Sort
 	Ω(n log(n))	θ(n log(n))	O(n log(n))	 
-Quick Sort
+* Quick Sort
 	Ω(n log(n))	θ(n log(n))	O(n^2)	 
-Merge Sort
+* Merge Sort
 	Ω(n log(n))	θ(n log(n))	O(n log(n))	 
-Bucket Sort
+* Bucket Sort
 	Ω(n+k)	θ(n+k)	O(n^2)	 
-Radix Sort
+* Radix Sort
 	Ω(nk)	θ(nk)	O(nk)	 
-Count Sort
+* Count Sort
 	Ω(n+k)	θ(n+k)	O(n+k)	 
 
 
@@ -27,14 +27,7 @@ function print(n)
     document.write( " " + n);
  
     // The last executed statement is recursive call
-   <b> print(n-1);</b>
-}
-
-
-
-
-
-
-
-</pre>
+    <b> print(n-1);</b>
+    }
+    </pre>
 
