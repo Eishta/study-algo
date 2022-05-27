@@ -1,22 +1,20 @@
-/**
- * QuickSort (arr, start, end)
- *     if start >=end
- *     pivot_index = partition(arr, start, end)
- *     QuickSort(arr, pivot_index +1, end)
- *     QuickSort(arr,start, pivot_index -1)
- */
 
 /**
- *  Partition(A, start, end)
- *      select pivot = A[end-1]
- *      p_index = start
- *      Loop i=start to end -1  
- *          if A[i] < pivot
- *              swap A[i] and A[p_index]
- *              p_index +1
- *          swap A[p_index] and pivot
- *          
- *      return p_index
+ * The key process in quickSort is partition().
+ *  Target of partitions is, given an array and an element x of array as pivot,
+ *  put x at its correct position in sorted array and put all smaller elements (smaller than x) before x,
+ *  and put all greater elements (greater than x) after x. All this should be done in linear time.
+ *
+ * 
+ * 
+ *  ->  SPACE COMPLEXITY
+ *         O(1) as no extra DS is used 
+ *  -> It is tail recursive-> no stack frame info is stored as there is nothing to do after the recursive call so it is better 
+ *  -> it takes O(1) space 
+ *  -> in worst case it uses O(n) sapce. - not in-place
+ *  -> it is not a stable algo. -> the order of elements is affected
+ *  -> Time complexity -> O(nLogn) 
+ *  -> Worst case space can be improved by tail call elemination
  */
 
 /** TIME COMPLEXITY Arrangements
@@ -32,15 +30,7 @@
  *      COMPLEXITY - O(n^2)  - traverse n elements at n levels
  */
 
-/** SPACE COMPLEXITY
- *         O(1) as no extra DS is used 
- */
-/**
- * The key process in quickSort is partition().
- *  Target of partitions is, given an array and an element x of array as pivot,
- *  put x at its correct position in sorted array and put all smaller elements (smaller than x) before x,
- *  and put all greater elements (greater than x) after x. All this should be done in linear time.
- */
+
 let quicksort = (A, start, end) => {
     if (start >= end) return
     let p_index = partition(A, start, end);
@@ -50,7 +40,7 @@ let quicksort = (A, start, end) => {
 }
 let partition = (A, start, end) => {
     let pivot = A[end], p_index = start;
-    for (let i = start; i <= end; i++) {
+    for (let i = start; i < end; i++) {
         if (A[i] < pivot) {
             [A[i], A[p_index]] = [A[p_index], A[i]]
             p_index++;
