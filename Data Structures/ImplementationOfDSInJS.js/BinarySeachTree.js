@@ -10,12 +10,12 @@ class BST {
         this.root = null
     }
 }
-BTS.prototype.insert = data => {
+BST.prototype.insert = data => {
     let node = new Node(data);
     if (this.root === null) this.root = node;
     else this.insertNode(this.root, node);
 }
-BTS.prototype.insertNode = (root, node) => {
+BST.prototype.insertNode = (root, node) => {
     if (node.data < root.data) {
         if (root.left === null) root.left = node;
         else this.insertNode(root.left, node);
@@ -25,15 +25,15 @@ BTS.prototype.insertNode = (root, node) => {
         else this.insertNode(root.right, node)
     }
 }
-BTS.prototype.findMinNode = function (root) {
+BST.prototype.findMinNode = function (root) {
     if (!root) root = this.root;
     if (root.left === null) return root;
     else { return this.findMinNode(root.left) }
 }
-BTS.prototype.delete = function (data) {
+BST.prototype.delete = function (data) {
     this.root = this.removeNode(this.root, data);
 }
-BTS.prototype.removeNode = function (root, data) {
+BST.prototype.removeNode = function (root, data) {
     if (root === null) return null;
     else if (data < root.data) {
         root.left = this.removeNode(root.left, data);
@@ -62,7 +62,7 @@ BTS.prototype.removeNode = function (root, data) {
         }
     }
 }
-BTS.prototype.search = function (root, data) {
+BST.prototype.search = function (root, data) {
     if (root == null) return null;
     else if (data < root.data) {
         return this.search(root.left, data);
@@ -74,21 +74,21 @@ BTS.prototype.search = function (root, data) {
         return root;
     }
 }
-BTS.prototype.inOrder = function (root) {
+BST.prototype.inOrder = function (root) {
     if (root !== null) {
         this.inOrder(root.left);
         console.log(root.data);
         this.inOrder(root.right);
     }
 }
-BTS.prototype.preOrder = function (root) {
+BST.prototype.preOrder = function (root) {
     if (root !== null) {
         console.log(root.data);
         this.preOrder(root.left);
         this.preOrder(root.right);
     }
 }
-BTS.prototype.postOrder = function (root) {
+BST.prototype.postOrder = function (root) {
     if (root !== null) {
         this.postOrder(root.left);
         this.postOrder(root.right);
