@@ -10,7 +10,7 @@ function TreeNode(val, left, right) {
  */
 
 let inorder = root =>{
-    let stack = [], list=[], node = root;
+    let stack = [], result=[], node = root;
     while(node || stack.length){
         if(node){
             stack.push(node)
@@ -18,9 +18,11 @@ let inorder = root =>{
         }
         else{
             node = stack.pop()
-            list.push(node.val);
+            result.push(node.val);
             node = node.right;
         }
     }
-    return list;
+    return result;
 }
+// Time Complexity : O(n)    
+// Space: O(n) = in case of skewed tree 

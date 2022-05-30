@@ -10,5 +10,4 @@ function BFS(start, graph){
             }
         }
     }
-
 }

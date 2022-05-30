@@ -2,7 +2,7 @@
 // Trees provide moderate insertion/deletion (quicker than Arrays and slower than Unordered Linked Lists).
 
 // APPLICATIONS
-// Routing, searching a word exists using Trie, File Storage Sytem, etc
+// Routing, searching a word exists using Trie, File Storage Sytem, syntax tree etc
 class Node {
     constructor(data) {
         this.data = data;

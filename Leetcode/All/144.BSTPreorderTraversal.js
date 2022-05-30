@@ -10,30 +10,30 @@
 //  Preorder (Root, Left, Right) 
 
 let preorder = root => {
-    let stack = [], list = [], node = root;
+    let stack = [], result = [], node = root;
     while (node) {
-        node.val && list.push(node.val);
+        node.val && result.push(node.val);
         node.right && stack.push(node.right);
         node = node.left || stack.pop();
     }
-    return list;
+    return result;
 }
 
 
 // Second
 let preorder2 = root => {
-    let stack = [], list = [], current = root;
-    while (current || stack.length) {
-        if (current) {
-            list.push(current.val);
-            stack.push(current.right);
-            current = current.left;
+    let stack = [], result = [], node = root;
+    while (node || stack.length) {
+        if (node) {
+            result.push(node.val);
+            stack.push(node.right);
+            node = node.left;
         }
         else {
-            current = stack.pop()
+            node = stack.pop()
         }
     }
-    return list;
+    return result;
 }
 
 
