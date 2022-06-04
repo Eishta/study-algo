@@ -32,7 +32,6 @@ function rightBoundary(root, res) {
         if (!isLeafNode(node)) stack.push(node.val);
         if (node.right) {
             node = node.right;
-
         }
         else {
             node = node.left;

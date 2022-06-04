@@ -18,7 +18,7 @@ class BinaryTree {
         while (stack.length) {
             let node = stack.pop();
             result.push(node.data);
-            if (node.right) stack.push(node.right);
+            if (node.right) stack.push(node.right); // to keep the track of right after the left has been processed
             if (node.left) stack.push(node.left);
         }
         return result;
@@ -48,7 +48,7 @@ class BinaryTree {
                 node = node.left;
             }
             else {
-                let temp = stack[stack.length - 1].right;
+                let temp = stack[stack.length - 1].right; // left is null , check for right , then we will come to the root
                 if (temp) {
                     node = temp;
                 }
