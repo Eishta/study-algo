@@ -1,7 +1,7 @@
-// Problem-> find the shortest path from a sorce node to all other nodes in the graph
+// Problem-> find the shortest path from a source node to all other nodes in the graph
 
 // BFS -> to go level wise
-// we use queue for BFS traversal and a dist array to maintain the distance of all the nodes from the sourec
+// we use queue for BFS traversal and a dist array to maintain the distance of all the nodes from the source
 // we will update the distance of a node is we get a  better and a smaller path
 // as it is undirected , there are 2E paths to reach a node
 
