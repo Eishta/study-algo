@@ -10,7 +10,7 @@ class Graph {
   addEdge(source, destination) {
     if (!this.adjacencyList[source]) {
       this.addVertex(source);
-    }
+    } 
     if (!this.adjacencyList[destination]) {
       this.addVertex(destination);
     }
@@ -29,3 +29,6 @@ class Graph {
     delete this.adjacencyList[vertex];
   }
 }
+
+
+export default Graph;
