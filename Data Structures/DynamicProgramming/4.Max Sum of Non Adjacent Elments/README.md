@@ -4,7 +4,7 @@ Given an array of ‘N’  positive integers, we need to return the maximum sum 
 Example 1:
 
 Input: n = 4, arr =[2,1,4,9]
-Output: 2
+Output: 11
 Explanation: 
 1. 2 + 4 = 6
 2. 1 + 9 = 10
@@ -32,5 +32,5 @@ Explanation:
 
 ### Tabulation
 1. To reduce the recursive stack space , we use tabulation
-2. Check the base case -> f(0) => 0, we store them in DP => dp=[0]
-3. It is a bottom up approch, so we start calculating from 0 and move towards n -> for every value of n , we calculate the steps from 1 to k and get the min
+2. Check the base case -> f(0) => arr[0], we store them in DP => dp=[arr[0]]
+3. It is a bottom up approch, so we start calculating from 1 and move towards n -> for every value of n , we calculate the max if we pick it or not
