@@ -1,0 +1,1 @@
+// We dont try to optimise the space as k can be any value even k = n is possible , so having n variables is not differnt than having an array of size k
