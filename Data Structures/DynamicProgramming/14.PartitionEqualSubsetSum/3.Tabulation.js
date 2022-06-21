@@ -4,7 +4,7 @@ function canPartitionTab(arr) {
     if (sum % 2 == 1) return false;
     else {
         let k = sum/2;
-        let dp = Array(arr.length).fill().map(() => Array(k).fill(-1));
+        let dp = Array(arr.length).fill().map(() => Array(k+1).fill(-1));
         // base case => target =0 
         for (let i = 0; i < arr.length; i++) {
             dp[i][0] = true;
@@ -13,7 +13,7 @@ function canPartitionTab(arr) {
         if (a[0] < k) dp[0][a[0]] = true;
     
         for (let i = 1; i < arr.length; i++) {
-            for (let target = 0; target < k; target++) {
+            for (let target = 1; target <= k; target++) {
                 let notTake = dp[i - 1][target];
                 let take = target - a[i] >= 0 ? dp[i - 1][target - a[i]] : false;
                 dp[i][target] = take || notTake;
@@ -24,6 +24,10 @@ function canPartitionTab(arr) {
 
 }
 
+// Time Complexity: O(N*K) +O(N)
 
-// TC = O(N * target) => traverse all the cells of dp
-//  Sc = O(N * target) = dp space
+// Reason: There are two nested loops that account for O(N*K) and at starting we are running a for loop to calculate totSum.
+
+// Space Complexity: O(N*K)
+
+// Reason: We are using an external array of size ‘N*K’. Stack Space is eliminated.

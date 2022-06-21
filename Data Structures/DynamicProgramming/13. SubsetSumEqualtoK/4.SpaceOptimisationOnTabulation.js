@@ -7,7 +7,7 @@ function subsetSumEqualToKTab(ind, k, arr) {
     // on index = 0, if target== a[0] retun 0, dont need to loop for all the target values
     if (arr[0] < k) prev[a[0]] = true;
 
-    for (let i = 0; i < arr.length; i++) {
+    for (let i = 1; i < arr.length; i++) {
         for (let target = 1; target <= k; target++) {
             let notTake = prev[target];
             let take = target - a[i] >= 0 ? prev[target - a[i]] : false;
