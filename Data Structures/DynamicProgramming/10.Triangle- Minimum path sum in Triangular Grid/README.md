@@ -2,9 +2,6 @@ We are given a Triangular matrix. We need to find the minimum path sum from the 
 
 At every cell we can move in only two directions: either to the bottom cell (↓) or to the bottom-right cell(↘)
 
-Example -> M = 3 , N = 2
-Output = 3 ways 
-
 ## Solution 
 As we have a fixed starting point so we consider 0, 0 as the top and n-1 as the bottom
 ### Recursion
