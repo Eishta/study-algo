@@ -5,8 +5,8 @@
 
 // we can use BST iterator such that we can do before to get the elements from end and next to get the eleemnts from front
 
-// reverse = true => before
-// reverse = false => next
+// reverse = true means  before() - get from the back
+// reverse = false means  next()- get from the front
 
 class BSTIterator{
     constructor(root, isReverse){

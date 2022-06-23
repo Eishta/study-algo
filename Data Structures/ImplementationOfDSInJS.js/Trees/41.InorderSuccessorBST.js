@@ -6,6 +6,7 @@
 // t = O(N)
 // s= O(1) -> incase or Moris
 
+// implementing a ceil in bst- closest bigger element
 
 
 const findSuccessor = (root, p) => {
@@ -22,7 +23,7 @@ const findSuccessor = (root, p) => {
     return suc;
 
 }
-
+// floor in bst - closest smaller element
 
 const findPredecessor = (root, p) => {
     if (!root) return null;

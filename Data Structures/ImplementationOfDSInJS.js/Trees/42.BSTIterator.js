@@ -12,6 +12,7 @@ class BSTIterator{
         pushAllLeft(tree);
     }
     next(){
+        // processed the node -> means root is procesed -> move to right
         let node = this.stack.pop();
         if(node.right){
             this.pushAllLeft(node.right)

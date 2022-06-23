@@ -19,7 +19,6 @@ class QObj {
 }
 
 /**
- * 
  * @param {*} root => the root node of the tree
  * @returns res => the max width of the tree
  */
@@ -29,14 +28,15 @@ function maxWidth(root) {
     que.push(new QObj(0, root));
     while (que.length) {
         let size = que.length;
-        let min_index = que[0].index;
+        let min_index = que[0].index; // 0 in this case 
         for (let i = 0; i < size; i++) {
             let obj = que.shift();
             let { index, node } = obj;
             let curIn = index - min_index; // to avoid the overflow
             if (i == 0) first = curIn;
             if (i == size - 1) last = curIn;
-            if (node.left) que.push(new QObj((2 * curIn) + 1), node.left);
+
+            if (node.left) que.push(new QObj((2 * curIn) + 1, node.left));
             if (node.right) que.push(new QObj((2 * curIn) + 2, node.right));
         }
         res = Math.max(res, last - first + 1);

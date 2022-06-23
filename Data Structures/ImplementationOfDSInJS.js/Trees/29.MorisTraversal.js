@@ -8,6 +8,7 @@ const moris = (root) => {
     let cur = root;
     while (cur) {
         if (!cur.left) {
+            // if there is no left, process the root and move right
             inorder.push(cur.val);
             cur = cur.right;
         }
@@ -47,6 +48,7 @@ const morisPreorder = (root) => {
             while (prev.right && prev.right != cur) {
                 prev = prev.right;
             }
+            // if it is null
             if (!prev.right) {
                 prev.right = cur;
                 preorder.push(cur.val); // before moving to left, process the root

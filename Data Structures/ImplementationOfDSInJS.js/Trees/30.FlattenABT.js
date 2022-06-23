@@ -24,7 +24,7 @@ const flatten = (root) => {
 
 
 // Iterative 
-// we main a stack and push the right and left child to it 
+// we mainain a stack and push the right and left child to it 
 // update the pointers to cur.right = stach.top => if left is not null then left
 // top down approach => we need stack to keep track of the pointers, once we update the cur.right , the cur.right node is lost so we keep them in stack to store and maintain their order
 

@@ -1,7 +1,7 @@
 // search for the node to delete 
 // // check if the root is null return null
 // if root.val > data => go to left 
-//      if root.left and root.left.val = data => delete root.left and update it 
+//      if root.left is equal to data => delete root.left and update it 
 // if root.val < data => move to the right
 //     if root.right is equal to data , delete root.right
 
@@ -24,9 +24,9 @@ const helper = (root) => {
     // store the right child
     let rightChild = root.right;
     // find the extreme right of the left child => the greatest in the left subtree
-    let lastRight = findExtremeRight(root.left);
+    let lastRightInLeftTree = findExtremeRight(root.left);
     // update the greatest child's right with root.right 
-    lastRight.right = rightChild;
+    lastRightInLeftTree.right = rightChild;
     return root.left;
 }
 

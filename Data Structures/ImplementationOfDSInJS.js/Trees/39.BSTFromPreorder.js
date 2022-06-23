@@ -3,7 +3,7 @@
 
 
 
-// Second approach=> from preorder , the first one will always be rotot so we will send ranges with the nodes and build tree
+// Second approach=> from preorder , the first one will always be root so we will send ranges with the nodes and build tree
 var bstFromPreorder = function (preorder) {
     let i = 0;
     return buildTree(preorder, Number.MIN_SAFE_INTEGER, Number.MAX_SAFE_INTEGER);
@@ -16,6 +16,5 @@ var bstFromPreorder = function (preorder) {
             root.right = buildTree(A, root.val, u);
             return root
         } else return null
-
     }
 };

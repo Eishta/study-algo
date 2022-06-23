@@ -1,5 +1,5 @@
 // burning the tree => visiting all the nodes 
-// we can use the level order traversal such that at time 1 , we can burn a nodes left, right and parent
+// we can use the level order traversal such that at time 1 , we can burn a node's left, right and parent
 
 
 //Approach
@@ -7,7 +7,7 @@
  * 1. markparents by using level traversal and a map that holds the parent of each node
  * 2. Level order traversal -> at each level there can be max 3 nodes burning -> left, right and parent
  *      we will travrse radially outwards by using the nodes left and right and the parent form the map 
- * 3. after traversing every level, if we burn any node of that level , we increase th etime 
+ * 3. after traversing every level, if we burn any node of that level , we increase the time 
  * 4. return the time 
  * 
  */
