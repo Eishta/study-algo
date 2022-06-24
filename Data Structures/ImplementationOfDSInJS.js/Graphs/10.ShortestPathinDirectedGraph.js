@@ -32,7 +32,7 @@ function shortestPathInDirectedGraph(adj, n, src) {
     // the first node should be the src node of which the distance  is stored as 0
     while (stack.length) {
         let node = stack.pop();
-        if (dist[node !== Infinity]) {
+        if (dist[node] !== Infinity) {
             for (let ele of adj[node]) {
                 if (dist[ele.node] > dist[node] + ele.weight) {
                     dist[ele.node] = dist[node] + ele.weight;

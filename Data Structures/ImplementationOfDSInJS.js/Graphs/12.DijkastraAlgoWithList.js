@@ -1,7 +1,9 @@
-// we will take a priority queue which will give us the node with least distance at the top
-// we maintain a dist array to calculate the distance 
-
-// do the BFS traversal 
+// BFS, 
+// Min heap ->  to store the nodes yet to be visited
+// Min heap -> returns the min dist node not yet visted
+ 
+// keep a ds to store the unvisited nodes (minheap in case of list), (visited array in matrix)
+// get the min dist non visited node and traverse all its non visited neighbours and update their dist if you find a lower one
 
 class Node {
     constructor(node, weight) {

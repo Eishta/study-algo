@@ -1,6 +1,6 @@
 // Apraoch -> all the children or neighbours of a node should be unvisited except the parent, if any other neighbour is visited and its not the parent , then there is a cycle
 // we push the node and also its parent
-// here we do the recursive implemengtation of the approach as it is DFS
+// here we do the recursive implementation of the approach as it is DFS
 /**
  * 
  * @param {*} v -> number of vertices

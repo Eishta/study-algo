@@ -1,6 +1,6 @@
 // here we are going to keep two arrays -> visited and dfsVisit
 // visited keeps track of the visited nodes in any loop
-// dfsVisit keeps track of the nodes visited in the current loop-> if backtracking happens , the current node is marked dfsVisitited
+// dfsVisit keeps track of the nodes visited in the current loop-> if backtracking happens , the current node is marked dfsVisitited = 0
 // dfsVisit tells that the cur node is already covered or not in the current path, if yes, then there is a cycle
 
 function checkCycle(n, adj) {

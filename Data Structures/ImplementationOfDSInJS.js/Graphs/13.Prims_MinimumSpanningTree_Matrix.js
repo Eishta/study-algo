@@ -3,9 +3,11 @@
  * 2 greedy Algos - Prims and kruskal
  */
 
-// Prims Algo -> greedy algo -> we choose the min weight edge of the selected vertices
+// Prims Algo -> greedy algo -> we choose the min weight edge out of the selected vertices, and traverse its neighbours
 
-
+// same as dijkastra- returns the node not yet visited and with min distance or weight
+// Prim's algorithm can work only on undirected graphs,
+// Prim's algorithm can handle negative edge weights
 function minKey(key, mst) {
     let min = Number.MAX_SAFE_INTEGER;
     let min_index;

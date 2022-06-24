@@ -7,21 +7,21 @@
  */
 function isCycle(v, adj) {
     let visited = {};
-    // traverse for all the components => can be connected ior disconnected with each other
+    // traverse for all the components => can be connected or disconnected with each other
     for (let i = 0; i < v; i++) {
         if (!visited[i])
-            if(checkCycle(i, v, adj, visited)) return true;
+            if(checkCycle(i, adj, visited)) return true;
     }
+    return false;
 }
 
 /**
  * 
  * @param {*} i -> the current node
- * @param {*} v -> total number of nodes or vertices
  * @param {*} adj -> adjacency list
  * @param {*} visited -> the map to track which node is already visited
  */
-function checkCycle(i, v, adj, visited) {
+function checkCycle(i, adj, visited) {
     let queue = [];
     visited[i] = true;
     queue.push({ node: i, parent: -1 });
@@ -44,5 +44,5 @@ function checkCycle(i, v, adj, visited) {
 }
 
 
-// T => O(N + E)
+// T => O(N + E) => no.od vertices + no. of edges
 // S => O(N + E) + O(N) + O(N) => adj , visited, queue

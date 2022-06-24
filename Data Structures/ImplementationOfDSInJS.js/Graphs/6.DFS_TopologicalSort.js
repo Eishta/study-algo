@@ -1,4 +1,4 @@
-// Topological sort => if there is an edge u -> v, then u occurs beofre v in the sorted result
+// Topological sort => if there is an edge u -> v, then u occurs before v in the sorted result
 // the graph should be directed and acyclic
 // we will use DFS here, and maintain a stack
 // once the DFS is over for a Node, put it into the stack 
