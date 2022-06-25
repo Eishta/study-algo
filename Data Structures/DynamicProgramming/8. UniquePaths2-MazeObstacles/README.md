@@ -3,7 +3,7 @@ We are given an “N*M” Maze. The maze contains some obstacles. A cell is ‘b
 We need to count the total number of unique paths from the top-left corner of the maze to the bottom-right corner. At every cell, we can move either down or towards the right.
 
 Example -> M = 3 , N = 2
-Output = 3 ways 
+Output = 3 ways
 
 ## Solution 
 just add a new condition that if arr[i][j] === -1 , return 0
