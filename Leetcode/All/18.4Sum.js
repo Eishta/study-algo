@@ -9,18 +9,18 @@ var fourSum = function (nums, target) {
     for (let i = 0; i < n; i++) {
         for (let j = i + 1; j < n; j++) {
             let target2 = target - nums[i] - nums[j];
-            let [front, end] = [j + 1, n - 1];
-            while (front < end) {
-                let twoSum = nums[front] + nums[end];
-                if (twoSum > target2) end--;
-                else if (twoSum < target2) front++;
+            let [l, r] = [j + 1, n - 1];
+            while (l < r) {
+                let twoSum = nums[l] + nums[r];
+                if (twoSum > target2) r--;
+                else if (twoSum < target2) l++;
                 else {
-                    let quad = [nums[i], nums[j], nums[front], nums[end]];
+                    let quad = [nums[i], nums[j], nums[l], nums[r]];
                     res.push(quad);
-                    front++;
-                    end--;
-                    while (front < end && nums[front] == nums[front - 1]) front++;
-                    while (front < end && nums[end] === nums[end + 1]) end--;
+                    l++;
+                    r--;
+                    while (l < r && nums[l] == nums[l - 1]) l++;
+                    while (l < r && nums[r] === nums[r + 1]) r--;
                 }
             }
             while (j + 1 < n && nums[j + 1] == nums[j]) j++;

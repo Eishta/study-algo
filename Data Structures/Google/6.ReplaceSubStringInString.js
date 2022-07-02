@@ -18,7 +18,7 @@
 // Output : 4
 
 function minimumOperations(str) {
-    let list = str.split();
+    let list = str.split('');
     let count = 0;
     while (true) {
         if (find_and_replace(list)) {
@@ -29,16 +29,16 @@ function minimumOperations(str) {
     return count;
 }
 function find_and_replace(list) {
-    let loc = [];
+    let loc = [];// stores the index of the 0 after which 1 occurs
     for (let i = 1; i < list.length; i++) {
         if (list[i] == '1' && list[i - 1] == '0') {
             loc.push(i - 1);
         }
     }
-    for (let ele of loc) {
-        list[ele] = '1';
-        list[ele + 1] = '0';
+    for (let index of loc) {
+        list[index] = '1';
+        list[index + 1] = '0';
     }
-    return list.length != 0;
+    return loc.length != 0;
 }
 

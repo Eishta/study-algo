@@ -1,6 +1,7 @@
 var firstMissingPositive = function (nums) {
     let n = nums.length;
-    // mark neg and >= n as n+1 as we are focused only on the positive and numbers in range 1 to n
+    // mark elememts which are neg or greater that nums.length with value = n+1
+    // as we are focused only on the positive numbers which are in range 1 to n
     for (let i = 0; i < n; i++) {
         if (nums[i] <= 0 || nums[i] > n) {
             nums[i] = n + 1

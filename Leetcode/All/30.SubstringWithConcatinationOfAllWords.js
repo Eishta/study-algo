@@ -22,7 +22,7 @@ var findSubstring = function (s, words) {
 
     if (s.length < totalWords * wordLength) return [];
     let loopEnd = s.length - totalWords * wordLength;
-    for (let i = 0; i <= loopEnd; i++) {
+    for (let i = 0; i <= loopEnd; i++) { // start can be till loopend as when start = loopend, end index = totalwords*wordlength
         let seen = {};
         for (let j = 0; j < totalWords; j++) {
             let index = i + j * wordLength;

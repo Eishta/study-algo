@@ -1,5 +1,5 @@
 /**
- * we have result = [], sol=[] iitaially
+ * we have result = [], sol=[] initaially
  * if there is no root, we return the result directly
  * else , push the current node value to the solution,
  * check if it is leaf node and this path results into targetSum, then push the current soution to the result

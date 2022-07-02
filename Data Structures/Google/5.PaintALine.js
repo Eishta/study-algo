@@ -1,6 +1,9 @@
 // Problem Statement:
-// There is a Line (Like X axis) which we need to paint. you are given a list of pairs which is needs to be painted, such as (4, 10), (7, 13), (16,20), (1, 40). There is a cost to paint a particular area which is equal to the distance.
-// Such as for (4, 10) the cost is 10 - 4 = 6. and so on. you have write the code to calculate the cost required to paint each of the given pairs. note that if the area is already painted once, no need to paint it again.
+// There is a Line (Like X axis) which we need to paint. you are given a list of pairs which is needs to be painted, such as (4, 10), (7, 13), (16,20), (1, 40).
+//  There is a cost to paint a particular area which is equal to the distance.
+//  Such as for (4, 10) the cost is 10 - 4 = 6. and so on.
+//  you have write the code to calculate the cost required to paint each of the given pairs.
+//   note that if the area is already painted once, no need to paint it again.
 
 // Example.
 // first we paint (4, 10), which costs 6, then we paint (7, 13), but we already know that 7-10 is already painted, so we will paint only 10-13 which will cost us 3 only.
@@ -17,7 +20,7 @@ function amountPainted(paint) {
         let end = paint[i][1];
         while (end > start) { 
             if (!arr[start]) {  // ex-> we came across [1,40] => at arr[4] we find 16, so now the start moves to 16, we will paint after that
-                arr[start] = end; // put from start to end --> end 
+                arr[start] = end; // mark from start to end with the  "end" so that we know till where it is already painted
                 count++;  // cur pair cost
                 start++;
             } else {

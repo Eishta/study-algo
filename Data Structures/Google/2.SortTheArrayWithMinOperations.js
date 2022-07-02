@@ -34,7 +34,7 @@ function stepsWithMinus(arr) {
 
 function stepsWithDivide(arr) {
     let steps = 0;
-    let max = Number.MAX_SAFE_INTEGER;
+    let max = Number.MAX_SAFE_INTEGER; // to avaoid the manipulation to array, we keep a max variable to store the max 
     for (let i = arr.length - 1; i >= 0; i--) {
         let n = arr[i];
         while (n > max) {

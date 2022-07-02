@@ -9,9 +9,9 @@ var findMedianSortedArrays = function (nums1, nums2) {
     if (nums1.length > nums2.length) return findMedianSortedArrays(nums2, nums1)
     let x = nums1.length
     let y = nums2.length
-    let low = 0, high = x
+    let low = 0, high = x; // length of bigger array
     while (low <= high) {
-        const partitionX = (high + low) >> 1
+        const partitionX = (high + low) >> 1; // divide by 2 and floor
         const partitionY = ((x + y + 1) >> 1) - partitionX
 
         const maxX = partitionX == 0 ? Number.NEGATIVE_INFINITY : nums1[partitionX - 1]
@@ -30,5 +30,4 @@ var findMedianSortedArrays = function (nums1, nums2) {
         } else
             high = partitionX - 1
     }
-
 };

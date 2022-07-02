@@ -1,4 +1,4 @@
-// Binary Search
+// #BinarySearch, #matrix
 // Link - https://www.youtube.com/watch?v=ZYpYur0znng
 var searchMatrix = function (matrix, target) {
     let cols = matrix[0].length;

@@ -8,21 +8,12 @@
 // Explanation: There are two ways to climb to the top.
 // 1. 1 step + 1 step
 // 2. 2 steps
+// Tags- #DP, #recursion, #fibonacci
 
 var climbStairs = function (n) {
-    let dp = [];
-    if (n === 1) {
-        return 1;
+    let dp = [1, 1];
+    for (let i = 2; i <= n; i++) {
+        dp[i] = dp[i - 1] + dp[i - 2];
     }
-    else if (n == 2) {
-        return 2;
-    }
-    else {
-        dp[1] = 1;
-        dp[2] = 2;
-        for (let i = 3; i <= n; i++) {
-            dp[i] = dp[i - 1] + dp[i - 2];
-        }
-        return dp[n]
-    }
+    return dp[n]
 };

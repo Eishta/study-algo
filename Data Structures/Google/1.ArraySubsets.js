@@ -13,19 +13,19 @@
 
 // https://leetcode.com/discuss/interview-question/2120553/What's-the-solution-or-Phone-Interview-or-Confidential
 
-function createArray(arr){
+function createArray(arr) {
     let sets = [[]];
-    for(let i =0; i<arr.length;i++){
+    for (let i = 0; i < arr.length; i++) {
         let n = sets.length;
-        for(let j = 0;j<n;j++){
+        for (let j = 0; j < n; j++) {
             let s = sets[j];
             sets.push([...s]);
             sets.at(-1).push(arr[i])
         }
     }
-    let left =[], right = [], start = 0, end = sets.length -1;
+    let left = [], right = [], start = 0, end = sets.length - 1;
 
-    while(start < sets.length && end >=0){
+    while (start < sets.length && end >= 0) {
         left.push(sets[start]);
         console.log(sets[start])
         right.push(sets[end]);

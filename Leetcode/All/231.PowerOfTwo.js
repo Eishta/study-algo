@@ -14,7 +14,7 @@ var isPowerOfTwo = function (n) {
 
 /**
  * 2 ^ i = n , if n is a pwer of 2
- * take log 2 both sides =>  log2(2^i) = log3(n)   
+ * take log 2 both sides =>  log2(2^i) = log2(n)   
  * i * log2(2) = log2(n)    
  * i = log2(n)           // bcz log2(2) = 1
  * i = log10(n) / log10(2)

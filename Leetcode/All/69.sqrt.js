@@ -6,6 +6,8 @@
 // Output: 2
 // Link : https://www.youtube.com/watch?v=VYtEKhxKd1Q
 
+// Tags - #binarysearch
+
 var mySqrt = function (x) {
     let left = 1;
     let right = x;

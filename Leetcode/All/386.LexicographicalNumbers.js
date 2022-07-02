@@ -1,19 +1,19 @@
 
- var lexicalOrder = function(n) {
+var lexicalOrder = function (n) {
     let sol = [];
-    for(let i=1;i<10;i++){
-        dfs(i,n,sol)
+    for (let i = 1; i < 10; i++) {
+        dfs(i, n, sol)
     }
     return sol;
 };
 
-let dfs=(i,n,sol)=>{
-    if(i>n)return;
+let dfs = (i, n, sol) => {
+    if (i > n) return;
     sol.push(i);
-    for(let j=0;j<10;j++){
-        dfs(i*10 + j, n, sol);
+    for (let j = 0; j < 10; j++) {
+        dfs(i * 10 + j, n, sol);
     }
-    
+
 }
 
 // Input: n = 13

@@ -34,6 +34,7 @@ var minWindow = function (s, t) {
             if (map[current] !== undefined) {
                 map[current]--;
             }
+            // all occurences of current are covered in string btw left and right
             if (map[current] == 0) count--;
         }
     }

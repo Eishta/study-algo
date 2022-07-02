@@ -12,7 +12,7 @@
 // Suppose Initially, it is given that all the House doors are closed. and you are standing at one random house.
 // and you have to count the total number of houses in the Circle. (by moving to the right or left) . how will you count the number of houses?
 
-function countHopuses() {
+function countHouses() {
     let count = 1;
     // open the door of first house only
     openDoor();

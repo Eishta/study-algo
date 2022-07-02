@@ -8,10 +8,10 @@ var removeNthFromEnd = function (head, n) {
         n--;
     }
     while (hare && hare.next) {
-        hare = hare.next;
+        hare = hare.next;  // hare will stop at the last element of the LL 
         curr = curr.next; // curr will stop at one element before the element to be deleted
     }
-    if (!hare) {  // hare is null when you have to delete the 1st element
+    if (!hare) {  // hare is null when you have to delete the 1st element, hare became null in 1st loop only
         head = head.next;
     } else {
         curr.next = curr.next ? curr.next.next : null;
