@@ -1,6 +1,6 @@
 // the path contains every node only once 
 
-// 124. Binary Tree Maximum Path Sum - Leetcode - #hard
+// 124. Binary Tree Maximum Path Sum - Leetcode - #hard => includes negative values
 
 var maxPathSum = function (root) {
     if (!root) return 0;

@@ -8,7 +8,7 @@ function minimumPathSumOfTriangleTab(n, triangle) {
 
     for (let i = n - 2; i >= 0; i--) {
         for (let j = i; j >= 0; j--) {
-
+            // the max columns present in that row = i, so j goes from 0 to i
             let down = triangle[i][j] + dp[i + 1][j];
             let diagonal = triangle[i][j] + dp[i + 1][j + 1]
             dp[i][j] = Math.min(down, diagonal);

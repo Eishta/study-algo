@@ -4,7 +4,7 @@ function frogJumps(n, k, arr) {
     let min = Number.MAX_SAFE_INTEGER;
     for (i = 1; i <= k; i++) {
         if (n - i >= 0) {
-            min = Math.min(min, frogJumps(n - i, k, arr) + Math.abs(arr[n] = arr[n - i]))
+            min = Math.min(min, frogJumps(n - i, k, arr) + Math.abs(arr[n] - arr[n - i]))
         }
     }
     return min;

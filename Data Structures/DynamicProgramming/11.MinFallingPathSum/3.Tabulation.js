@@ -6,10 +6,12 @@ function MaxFallingPathSum(arr) {
     let max = 0;
 
     // base case
+    // for 1st row => i = 0 
     for (let j = 0; j < m; j++) {
         dp[0][j] = arr[0][j];
     }
 
+    // start from 2nd row
     for (let i = 1; i < n; i++) {
         for (let j = 0; j < m; j++) {
             let up = dp[i - 1][j] + arr[i][j];

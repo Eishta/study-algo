@@ -10,7 +10,7 @@ As we have a fixed starting point so we consider 0, 0 as the top and n-1 as the 
 3. Base case -> 1.There will be a single base case:
 When i == N-1, that is when we have reached the last row, so the min path from that cell to the last row will be the value of that cell itself, hence we return mat[i][j].
 4. Recurrence relation - we can either move down or diagonal down -> so two choices at each step 
-   f(i,j) = min(left, up) 
+   f(i,j) = min(down, dg) 
    down = f(i+1, j) + arr[i][j]
    dg = f(i+1, j+1) + arr[i][j]
 5. return the min of dg and down   

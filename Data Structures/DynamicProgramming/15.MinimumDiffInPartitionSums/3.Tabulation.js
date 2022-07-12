@@ -1,5 +1,5 @@
 function minimumSubsetDiffernce(arr) {
-    let k = arr.reduce((acc, ele) => acc + ele, 0);
+    let k = arr.reduce((acc, ele) => acc + ele, 0); // O(N)
 
     let dp = Array(arr.length).fill().map(() => Array(k + 1).fill(false));
     // base case => target =0 
@@ -9,6 +9,7 @@ function minimumSubsetDiffernce(arr) {
     // on index = 0, if target== a[0] retun 0, dont need to loop for all the target values
     if (a[0] <= k) dp[0][k] = true;
 
+    // O(N*K)
     for (let i = 1; i < arr.length; i++) {
         for (let target = 1; target <= k; target++) {
             let notTake = dp[i - 1][target];
@@ -19,7 +20,7 @@ function minimumSubsetDiffernce(arr) {
 
     let mini = Number.MAX_SAFE_INTEGER;
     let n = arr.length
-    // loop through the last row of DP
+    // loop through the last row of DP=> O(N)
     for (let i = 0; i <= k; i++) {
         if (dp[n - 1][i] == true) {
             // calculate the diff
