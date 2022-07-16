@@ -1,4 +1,6 @@
-function subsetDiffEqualToKTab(sum, arr) {
+// tabulation
+
+function findWays(sum, arr) {
     let dp = Array(arr.length).fill().map(() => Array(sum + 1).fill(0));
     if (arr[0] == 0) dp[0][0] = 2; // 2 ways pick or not pick
     else dp[0][0] = 1 // 1 => not pick
@@ -9,24 +11,38 @@ function subsetDiffEqualToKTab(sum, arr) {
     for (let i = 1; i < arr.length; i++) {
         for (let target = 1; target <= sum; target++) {
             let notTake = dp[i - 1][target];
-            let take = target - a[i] >= 0 ? dp[i - 1][target - a[i]] : 0;
+            let take = 0;
+            if (arr[i] <= target) take = dp[i - 1][target - a[i]];
             dp[i][target] = take + notTake;
         }
     }
     return dp[arr.length - 1][sum];
 }
 
-function countPartitions(diff, arr) {
-    totalSum = 0;
-    for (i = 0; i < n; i++) {
-        totalSum += arr[i];
-    }
+function targetSum(target, arr) {
 
-    //Checking for edge cases
-    if (totalSum - diff < 0 || (totalSum - diff) % 2) return 0;
+    let totalSum = 0;
+    totalSum = arr.reduce((a, b) => a + b, 0);
 
-    return subsetDiffEqualToKTab((totalSum - diff) / 2, arr);
+    if ((totalSum - target) % 2 == 1) return 0; // it should be even not odd
+    if ((totalSum - target) < 0) return 0; // should be positive 
+
+    let s2 = (totalSum - target) / 2; // now s2 becomes the target
+
+    // find the number of ways s2 can be achieved
+    return solve(arr.length - 1, s2, arr)
+
 }
+
+
+
+
+
+
+
+
+
+
 // Time Complexity: O(N*K)
 
 // Reason: There are two nested loops

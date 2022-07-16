@@ -27,7 +27,7 @@ Count sum with given sum
 arr = [0,0,1] and the target = 1.
 ans should be 4 but the question 16 will give answer 1
 
-so the base condition becomes
+so the base condition becomes after removing the below condition
 if(target === 0)return 1 => (ther can be many ways depeneding on the number of 0 so remove this condition)
 
 if(ind === 0) && (target === 0 && arr[ind] == 0) 2 was either pick or not pick
