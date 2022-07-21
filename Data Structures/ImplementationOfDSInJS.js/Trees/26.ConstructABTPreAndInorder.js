@@ -11,7 +11,28 @@ class Node {
         this.right = null;
     }
 }
+// easier and better--- Method 1
+var buildTree = function (preorder, inorder) {
+    if (inorder.length !== preorder.length) return;
+    let count = 0;
+    let map = {};
+    for (let i = 0; i < inorder.length; i++) {
+        map[inorder[i]] = i;
+    }
+    function solve(start, end) {
+        if (start > end) return null;
+        if (count === preorder.length) return;
+        let root = new TreeNode();
+        root.val = preorder[count++];
+        root.left = solve(start, map[root.val] - 1);
+        root.right = solve(map[root.val] + 1, end);
+        return root;
+    }
+    return solve(0, inorder.length - 1);
+};
 
+
+// Method 2
 function constructTree(preorder, inorder) {
     if (preorder.length !== inorder.length) return null;
     let map = new Map();
@@ -38,3 +59,5 @@ function getTree(p, ps, pe, i, is, ie, map) {
     root.right = getTree(p, ps + numleft + 1, pe, i, index + 1, ie, map)
     return root;
 }
+
+
