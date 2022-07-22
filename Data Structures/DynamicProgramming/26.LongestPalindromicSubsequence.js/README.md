@@ -7,7 +7,7 @@ LPS : bbbb   (subsequence -> same order but may not be consequtive)
 
 ### Brute Force 
 * find all the subsequnces and manually find the palindromic one 
-* time complexity : 
+* time complexity : exponential
 
 ### Using DP - Tabulation and LCS 
 * let a = str and b = reverse of str

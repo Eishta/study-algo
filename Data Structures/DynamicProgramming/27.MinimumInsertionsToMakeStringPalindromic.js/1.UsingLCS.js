@@ -20,6 +20,7 @@ function lcs(a, b) {
     }
 
     return dp[n][m];
+   
 }
 
 
@@ -28,7 +29,8 @@ function longestPalindromicSubsequence(str) {
     for (let i = str.length - 1; i >= 0; i--) {
         reverse += str[i]
     }
-    return lcs(str, reverse);
+    let lenOfLPS =  lcs(str, reverse);
+    return str.length - lenOfLPS;
 }
 
 // Time Complexity: O(N*M) - There are two nested loops
