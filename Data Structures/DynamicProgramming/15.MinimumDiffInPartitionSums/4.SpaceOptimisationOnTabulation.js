@@ -14,7 +14,7 @@ function minimumSubsetDiffernce(arr) {
             let take = target - a[i] >= 0 ? prev[target - a[i]] : false;
             cur[target] = take || notTake;
         }
-        prev = cur;
+        prev = [...cur];
     }
 
     let mini = Number.MAX_SAFE_INTEGER;

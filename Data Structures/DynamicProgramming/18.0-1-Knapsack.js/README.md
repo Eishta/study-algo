@@ -35,5 +35,5 @@ introduce dp => 2D => [ind][weightInBagLeft + 1]
 1. prev will be a weightInBagLeft + 1 size array and same cur and fill with 0 
 2. prev[w] = val[0] for w= wt[0] to weightInBagLeft
 3. loop through i(1 to n-1) and w(0 to weightInBagLeft) , and take and not take will use prev and we will calculate cur,
-   after loop ends for col , prev = cur;
+   after loop ends for col , prev = [...cur];
 4. return prev[weightInBagLeft]

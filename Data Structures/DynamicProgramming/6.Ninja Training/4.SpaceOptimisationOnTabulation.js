@@ -19,7 +19,7 @@ function ninjaTrainingTab(arr, n) {
             }
         }
         // after all the indices of cur are filled -> from last 0 to 3
-        prev = cur;
+        prev = [...cur];
     }
     return prev[3]
 }

@@ -31,4 +31,4 @@ introduce dp => 2D => [ind][target]
 1. prev will be a target size array and same cur 
 2. prev[0] and cur[0] = true, => when target = 0, for taregt = a[0]=> prev[a[0]] = true
 3. loop through i and target , and take and not take will use prev and we will calculate cur,
-   after loop ends for col-> target , prev = cur;
+   after loop ends for col-> target , prev = [...cur];

@@ -17,7 +17,7 @@ function canPartitionSpace(arr) {
                 let take = target - a[i] >= 0 ? prev[target - a[i]] : false;
                 cur[target] = take || notTake;
             }
-            prev = cur;
+            prev = [...cur];
         }
         return prev[k];
     }

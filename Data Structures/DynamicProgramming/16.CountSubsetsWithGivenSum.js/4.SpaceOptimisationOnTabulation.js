@@ -12,7 +12,7 @@ function subsetSumEqualToKTab(sum, arr) {
             let take = target - a[i] >= 0 ? prev[target - a[i]] : 0;
             cur[target] = take + notTake;
         }
-        prev = cur;
+        prev = [...cur];
     }
     return dp[arr.length - 1][sum];
 }

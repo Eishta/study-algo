@@ -16,7 +16,7 @@ function minCoins(coins, amount) {
             }
             cur[T] = Math.min(take, notTake);
         }
-        prev = cur
+        prev = [...cur]
     }
     if (prev[amount] === Number.MAX_SAFE_INTEGER) return -1;
     else return prev[amount]

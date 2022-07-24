@@ -11,7 +11,7 @@ function uniquePathsTab(m, n) {
                 cur[j] = up + left
             }
         }
-        prev = cur;
+        prev = [...cur];
     }
     return prev[n - 1];
 

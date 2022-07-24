@@ -24,7 +24,7 @@ function MaxFallingPathSum(arr) {
 
             cur[j] = Math.max(up, leftDiagonal, rightDiagonal);
         }
-        prev = cur;
+        prev = [...cur];
     }
 
     for (let j = 0; j < m; j++) {

@@ -17,7 +17,7 @@ function minimumPathSumSpace(m, n, arr) {
                 cur[j] = Math.min(up, left)
             }
         }
-        prev = cur;
+        prev = [...cur];
     }
     return prev[n - 1];
 

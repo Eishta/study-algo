@@ -30,7 +30,7 @@ function MaximumChocolatesTab(r, c) {
                 cur[j1][j2] = max;
             }
         }
-        prev = cur;
+        prev = [...cur];
     }
     return prev[0][c-1]
 }

@@ -14,7 +14,7 @@ function minimumPathSumOfTriangleSpace(n, triangle) {
             let diagonal = triangle[i][j] + prev[j + 1]
             cur[j] = Math.min(down, diagonal);
         }
-        prev = cur;
+        prev = [...cur];
     }
     return dp[0][0]
 

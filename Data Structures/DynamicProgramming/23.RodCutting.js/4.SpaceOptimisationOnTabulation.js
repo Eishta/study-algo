@@ -15,7 +15,7 @@ function rodCutting(lengthOfRod, price) {
             }
             cur[w] = Math.max(take, notTake)
         }
-        prev = cur;
+        prev = [...cur];
     }
     return dp[lengthOfRod - 1][lengthOfRod]
 }

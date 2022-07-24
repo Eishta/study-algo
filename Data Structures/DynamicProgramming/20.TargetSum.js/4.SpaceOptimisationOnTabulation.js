@@ -16,7 +16,7 @@ function findWays(sum, arr) {
             if (arr[i] <= target) take = prev[target - a[i]];
             cur[target] = take + notTake;
         }
-        prev = cur;
+        prev = [...cur];
     }
     return dp[arr.length - 1][sum];
 }
