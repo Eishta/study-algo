@@ -23,11 +23,11 @@ Output: 0
 * if i === n || cap == 0 return 0
 3. Explore all the possible values -> pick for buy or not , pick for sell or not
 * if(buy == 0) => buy the stock 
-* * pickBuy => f(i + 1, 1, cap)
+* * pickBuy => -prices[i] + f(i + 1, 1, cap)
 * * notPickBuy => f(i + 1, 0, cap)
 * * return max(pickBuy, notPickBuy)
 * if(buy == 1) => sell the stock
-* * pickSell => f(i + 2, 0, cap - 1)
+* * pickSell => prices[i] + f(i + 2, 0, cap - 1)
 * * notPickSell => f(i + 1, 1, cap)
 * * return max(pickSell, notPickSell)
 

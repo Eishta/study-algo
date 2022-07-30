@@ -12,7 +12,7 @@ var maxProfit = function (k, prices) {
                 }
             }
         }
-        ahead = cur
+        ahead = [...cur]
     }
     return ahead[0][k]
 };
