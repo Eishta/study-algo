@@ -32,3 +32,6 @@ TC = exponential ( 2n )
 
 return the max of all the elements in dp 
 
+### print LIS 
+1. Keep updating the hash array with the index of element included in LIS every time a bigger subsequnece is formed for the cur element 
+2. Loop through the hash array from the maxIndex to the index where hash[index] = index(no further element to add)
